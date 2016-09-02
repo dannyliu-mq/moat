@@ -3,8 +3,14 @@
 The Macquarie Open Analytics Toolkit (MOAT) project at Macquarie University in Sydney, Australia, seeks to address learning analytics holistically, bringing together data from the learning management system and beyond, combining visualisations and data modelling techniques with pedagogical insight and a customisable intervention engine to help staff improve the learning experience for students.
 
 #Installation
+Installation for Ubuntu
+1. Download the files to your server
+2. Place into a httpd served directory
+
 
 #Usage
+To run the stats server
+1. Login using ssh and run common/AJAX/ajaxServer.py as a background process
 
 #References
 

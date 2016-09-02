@@ -1,0 +1,117 @@
+<html>
+	<head>
+		<title>Sankey Diagram</title>
+
+		<link type="text/css" rel="stylesheet" href="../common/all.css.php" />
+		<script src="../common/all.js.php"></script>
+		<script src="run.js"></script>
+	</head>
+
+	<body>
+		<div id="header">
+			<h1>Sankey Diagram</h1>
+			
+
+			<div id="description">
+				<h2>Information</h2>
+				<div class="left half">
+					<h3>Business Description</h3>
+					<p>This report targets a dynamic node and shows the nodes students accessed prior to attempting the quiz.</p>
+				</div>
+
+				<div class="right half">
+					<h3>Technical Description</h3>
+					<p>This is still under development.</p>
+				</div>
+				<br clear="both" />
+			</div>
+
+			<div id="controlArea">
+				<h2>Graph Controls</h2>
+				<form name="controlForm" id="controlForm" method="POST" >
+					<div class="left oneThird" style="width: 35%">
+						<h3>Query Options</h3>
+						<table border=1>
+							<tr>
+								<td><label for="courseID">My Courses: </label></td>
+								<td>
+									<select id="courseID" name="courseid" disabled>
+										<option>Finding Courses...</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="modType">Module Type: </label></td>
+								<td>
+									<select id="modType" name="modtype" disabled>
+										<option value="">Please select a course first...</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="modID">Module: </label></td>
+								<td>
+									<select id="modID" name="modID" disabled>
+										<option value="">Please select a module type first...</option>
+									</select>
+								</td>
+							</tr>
+							<tr>
+								<td><label for="numMinus">Node Levels: </label></td>	
+								<td><input id="numMinus" name="numMinus" type="number" min="1" max="5" value="2" onChange="detectNumNodes();" /></td>
+							</tr>
+							<tr>
+								<td id="numNodesWarning" colspan="2">
+									Generating a sankey diagram with 4 or more Node Levels can sometimes fail.
+								</td>
+							</tr>
+						</table>
+					</div>
+
+					<div class="right twoThird">
+
+						<div class="left oneThird" style="width: 35%">
+							<h3>File Upload</h3>
+							<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur eu nisi cursus, placerat quam ut, pulvinar augue. Duis placerat lorem ornare nunc ullamcorper hendrerit. Aenean ut turpis vel mauris pretium lacinia. Maecenas urna justo, porta eget orci id, placerat tristique mauris. Fusce a dictum eros. Maecenas aliquet lacus congue condimentum tincidunt.</p>
+							<div class="halfLineTop halfLineBot"><label for="uploadedfile">Grade Upload:</label> <input id="uploadedfile" name="dataFile" type="file" class="file" /></div>
+						</div>
+
+						<div class="right twoThird">
+							<h3>Display Options</h3>
+							<label for="dataType">Type of Data: </label>
+							<select id="dataType" name="dataType" disabled="disabled">
+								<option name="">Please upload a data file first...</option>
+							</select>
+
+							<input for="numIntervals" name="numIntervals" id="numIntervals" type="number" max="20" min="2" value="5" disabled="disabled" />
+
+							<!-- HTML to show for Numeric -->
+							<table id="dataSets">
+								<thead>
+								</thead>
+
+								<tbody>
+									<tr>
+										<td>Stuff Here</td>
+									</tr>
+								</tbody>
+							</table>
+
+							<!-- HTML to show for Category -->
+						</div>
+
+						<div class="alignRight" style="clear: both">
+							<input type="submit" class="submitButton" value="Run without Grades" align="right" onclick="requestGraph(false);" />
+							<input type="submit" class="submitButton" value="Upload Grades" onclick="requestGraph(true);" />
+						</div>
+					</div>
+					<br clear="both" />
+				</form>
+			</div>
+		</div>
+
+		<div id="graph" class="sankey">
+			<center><img src="../common/images/loading.gif" id="loading-image" align="center" width="200px" /></center>
+		</div>
+	</body>
+ </html>

@@ -1,0 +1,65 @@
+/* Common Stuff */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700);
+
+#loading-image{ display: none; }
+* { font-family: 'Open Sans', sans-serif;  font-size: 12px; }
+/*{ font-family: Arial, sans-serif; }*/
+h1{ margin: 0px; font-size: 28px; text-align: center; }
+h2{ margin-top: 25px; margin-bottom: 0px; font-size: 18px; color: #333; text-decoration: underline; }
+h3{ margin-top: 0px; margin-bottom: 0px; font-size: 14px; font-style: italic; color: #333; }
+p{ margin: 0px; font-size: 12px; color: #333; word-wrap: break-word; }
+#graph{ clear: both; padding-top: 20px; width: 1000px; background: #FFF; margin: 0 auto; }
+svg{ margin: auto; display: block; border: 1px solid #666;}
+
+/*#description, #controlArea{ clear: both; display: block; border: 1px solid black; padding: 0 10px; margin: 15px auto; width: 80%; }*/
+#description, #controlArea{ clear: both; display: block; padding: 0 10px; margin: 15px auto; font-size: 16px; }
+.left, .right{ padding: 5px 10px; }
+.half { width: 45%; }
+.bottom { width: 5%; }
+.oneThird { width: 25%; margin-right: 10px; }
+/*.twoThird {  margin-top: 10px; margin-right: 10px; margin-bottom: 10px; }*/
+.twoThird {  margin-top: 10px; margin-right: 10px; }
+/*.left{ float: left; background: yellow; }*/
+/*.right{ float: right; background: pink; }*/
+.left{ float: left; }
+.right{ float: right; }
+/*input[type='submit'] { color: #14396A; font-size: 14px; padding: 10px 40px; -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; border: 2px solid #3866A3;  background: #63B8EE; }*/
+input[type='submit'] { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
+input[type='submit']:hover { cursor: pointer; }
+.disabled{ background: #999 !important; color: #666 !important; border-color: #999 !important; }
+.halfLineTop{ padding-top: 4px; }
+.halfLineBot{ padding-bottom: 7px; }
+.alignRight{ display: block; float: right; }
+.noSize{ padding: inherit !important; width: inherit !important;}
+
+
+/*Network Diagrams*/
+div.network .link { stroke: #666; opacity: 0.6; stroke-width: 1.5px; }
+div.network .node circle { stroke: #fff; opacity: 0.6; stroke-width: 1.5px; }
+div.network text { font: 7px serif; opacity: 0.6; pointer-events: none; }
+
+/*Sankey Diagrams*/
+div.sankey .node rect { cursor: move; fill-opacity: .9; shape-rendering: crispEdges; }
+div.sankey .node text { pointer-events: none; text-shadow: 0 1px 0 #fff; }
+div.sankey .link { fill: none; stroke: #000; stroke-opacity: .3; }
+div.sankey .link:hover { stroke-opacity: .8; }
+
+table#dataSets th{ font-size: 12px; }
+table#dataSets input[type=number]{ width: 40px; }
+table#dataSets td.colourDisplay{ width: 100px; height: 20px; font-size: 10px; }
+.smallText { font-size: 12px; }
+.faintText { color: #666; }
+
+table tr{ border-bottom: 0; }
+div.row { border-top: 1px solid #bbbaba; clear: both; padding-top: 5px; margin-bottom: 5px; }
+div.row:nth-child(1) { border-top: 0; }
+
+label { line-height: 32px; }
+select{ height: 50px; }
+div#header{ margin-bottom: 0; }
+
+div#header{ min-height: inherit; }
+
+td#numNodesWarning{ display: none; font-size: 10px; color: red; }
+
+select{ text-transform:capitalize; }
